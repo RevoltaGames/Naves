@@ -10,10 +10,16 @@ public class Naves extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
 	
+	public static int WIDTH;
+	public static int HEIGTH;
+	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
+		
+		HEIGTH = Gdx.graphics.getHeight();
+		WIDTH = Gdx.graphics.getWidth();
 	}
 
 	@Override

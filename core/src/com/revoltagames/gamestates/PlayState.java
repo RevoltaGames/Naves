@@ -12,9 +12,8 @@ import com.revoltagames.entities.Asteroid;
 import com.revoltagames.entities.Bullet;
 import com.revoltagames.entities.Particle;
 import com.revoltagames.entities.Player;
-import com.revoltagames.managers.GameKeys;
 import com.revoltagames.managers.GameStateManager;
-import com.revoltagames.mygdxgame.MainGame;
+import com.revoltagames.naves.Naves;
 
 public class PlayState extends GameState {
 	
@@ -80,8 +79,8 @@ public class PlayState extends GameState {
 			
 			
 			do {
-				x = MathUtils.random(MainGame.WIDTH);
-				y = MathUtils.random(MainGame.HEIGTH);
+				x = MathUtils.random(Naves.WIDTH);
+				y = MathUtils.random(Naves.HEIGTH);
 			
 				dx = x - player.getx();
 				dy = y - player.gety();
@@ -215,8 +214,8 @@ public class PlayState extends GameState {
 		
 		sb.setColor(1, 1, 1, 1);
 		sb.begin();
-		//font.draw(sb, Long.toString(player.getScore()), 40, MainGame.HEIGTH - 15);
-		//font.draw(sb, Integer.toString(player.getLives()), MainGame.WIDTH - 40, MainGame.HEIGTH -15);
+		//font.draw(sb, Long.toString(player.getScore()), 40, Naves.HEIGTH - 15);
+		//font.draw(sb, Integer.toString(player.getLives()), Naves.WIDTH - 40, Naves.HEIGTH -15);
 		sb.end();
 		
 
@@ -224,13 +223,15 @@ public class PlayState extends GameState {
 
 	@Override
 	public void handleInput() {
+		
+		// TODO imputmanager
 
-		player.setLeft(GameKeys.isDown(GameKeys.LEFT));
+	/*	player.setLeft(GameKeys.isDown(GameKeys.LEFT));
 		player.setRight(GameKeys.isDown(GameKeys.RIGTH));
 		player.setUp(GameKeys.isDown(GameKeys.UP));
 		if (GameKeys.isPressed(GameKeys.SPACE)){
 			player.shoot();
-		}
+		}*/
 
 	}
 

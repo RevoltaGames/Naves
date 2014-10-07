@@ -1,6 +1,6 @@
 package com.revoltagames.entities;
 
-import com.revoltagames.mygdxgame.MainGame;
+import com.revoltagames.naves.Naves;
 
 public class SpaceObject {
 	
@@ -21,10 +21,10 @@ public class SpaceObject {
 	protected float[] shapey;
 
 	protected void wrap() {
-		if (x < 0) x = MainGame.WIDTH;
-		if (x > MainGame.WIDTH) x = 0;
-		if (y < 0) y = MainGame.HEIGTH;
-		if (y > MainGame.HEIGTH) y = 0;
+		if (x < 0) x = Naves.WIDTH;
+		if (x > Naves.WIDTH) x = 0;
+		if (y < 0) y = Naves.HEIGTH;
+		if (y > Naves.HEIGTH) y = 0;
 
 	}
 	

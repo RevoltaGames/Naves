@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.math.MathUtils;
-import com.revoltagames.mygdxgame.MainGame;
+import com.revoltagames.naves.Naves;
 
 public class Player extends SpaceObject{
 	
@@ -43,8 +43,8 @@ public class Player extends SpaceObject{
 	
 	public Player(ArrayList<Bullet> bullets) {
 		
-		x = MainGame.WIDTH / 2;
-		y = MainGame.HEIGTH / 2;
+		x = Naves.WIDTH / 2;
+		y = Naves.HEIGTH / 2;
 		
 		maxSpeed = 300;
 		acceleration = 200;
@@ -244,8 +244,8 @@ public class Player extends SpaceObject{
 	}
 
 	public void reset() {
-		x = MainGame.WIDTH / 2;
-		y = MainGame.HEIGTH / 2;
+		x = Naves.WIDTH / 2;
+		y = Naves.HEIGTH / 2;
 		
 		setShape();
 		hit = dead = false;

@@ -12,7 +12,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
 import com.revoltagames.entities.Particle;
 import com.revoltagames.managers.GameStateManager;
-import com.revoltagames.mygdxgame.MainGame;
+import com.revoltagames.naves.Naves;
 
 public class MenuState extends GameState {
 	
@@ -48,9 +48,7 @@ public class MenuState extends GameState {
 		
 		particles = new ArrayList<Particle>();
 		
-		FreeTypeFontGenerator gen = new FreeTypeFontGenerator(Gdx.files.absolute("/home/alejandro/Dropbox/WorkspaceGDX/my-gdx-juegaso/res/fonts/DroidSans-Bold.ttf"));
-		fontB = gen.generateFont(50);
-		fontS = gen.generateFont(25);
+		// TODO fuentes
 		
 		
 		
@@ -66,8 +64,8 @@ public class MenuState extends GameState {
 		
 		for (int i = 0; i < 200; i++) {
 			float x, y;
-			x = MathUtils.random(MainGame.WIDTH);
-			y = MathUtils.random(MainGame.HEIGTH);
+			x = MathUtils.random(Naves.WIDTH);
+			y = MathUtils.random(Naves.HEIGTH);
 			createParticles(x, y);
 		}
 		
@@ -100,8 +98,8 @@ public class MenuState extends GameState {
 
 		sb.setColor(1, 1, 1, 1);
 		sb.begin();
-		fontB.drawWrapped(sb, "ASTEROIDS" , 0, MainGame.HEIGTH / 2 + 30, MainGame.WIDTH, HAlignment.CENTER);
-		fontS.drawWrapped(sb, Integer.toString(fps), 0, MainGame.HEIGTH / 2 - 60, MainGame.WIDTH, HAlignment.CENTER);
+		fontB.drawWrapped(sb, "ASTEROIDS" , 0, Naves.HEIGTH / 2 + 30, Naves.WIDTH, HAlignment.CENTER);
+		fontS.drawWrapped(sb, Integer.toString(fps), 0, Naves.HEIGTH / 2 - 60, Naves.WIDTH, HAlignment.CENTER);
 		sb.end();
 		count++;
 		
