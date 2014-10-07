@@ -22,8 +22,8 @@ public class PlayState extends GameState {
 	
 	private BitmapFont font;
 	
-	private Player player;
-	private ArrayList<Bullet> bullets;
+	//private Player player;
+	//private ArrayList<Bullet> bullets;
 	
 	private ArrayList<Asteroid> asteroids;
 	
@@ -46,9 +46,9 @@ public class PlayState extends GameState {
 		//FreeTypeFontGenerator gen = new FreeTypeFontGenerator(Gdx.files.internal("fonts/DroidSans-Bold.ttf"));
 		//font = gen.generateFont(30);
 		
-		bullets = new ArrayList<Bullet>();
+		//bullets = new ArrayList<Bullet>();
 		
-		player = new Player(bullets);
+		//player = new Player(bullets);
 		
 		asteroids = new ArrayList<Asteroid>();
 		
@@ -77,13 +77,13 @@ public class PlayState extends GameState {
 			
 			float x, y, dx, dy, dist;
 			
-			
+			dx=dy=Naves.HEIGTH;
 			do {
 				x = MathUtils.random(Naves.WIDTH);
 				y = MathUtils.random(Naves.HEIGTH);
 			
-				dx = x - player.getx();
-				dy = y - player.gety();
+			//	dx = x - player.getx();
+			//	dy = y - player.gety();
 				dist = (float) Math.sqrt(dx*dx + dy*dy);
 			}while(dist < 100);
 			
@@ -104,7 +104,7 @@ public class PlayState extends GameState {
 			spawnAsteroids();
 		}
 		
-		player.update(dt);
+	/*	player.update(dt);
 		if (player.isDead()) {
 			player.reset();
 			player.loseLife();
@@ -117,7 +117,7 @@ public class PlayState extends GameState {
 				bullets.remove(i);
 				i--;
 			}
-		}
+		}*/
 		
 		for (int i = 0; i < asteroids.size() ; i++) {
 			asteroids.get(i).update(dt);
@@ -144,7 +144,7 @@ public class PlayState extends GameState {
 	private void checkCollisions() {
 		
 		// bullet asteroid
-		for (int i = 0; i < bullets.size(); i++) {
+	/*	for (int i = 0; i < bullets.size(); i++) {
 			Bullet b = bullets.get(i);
 			for(int j = 0; j < asteroids.size(); j++) {
 				Asteroid a = asteroids.get(j);
@@ -160,10 +160,10 @@ public class PlayState extends GameState {
 					break;
 				}
 			}
-		}
+		}*/
 		
 		// Player asteroid
-		if (!player.isHit()) {
+	/*	if (!player.isHit()) {
 			for (int i = 0; i < asteroids.size(); i++) {
 				Asteroid a = asteroids.get(i);
 				if(a.instersects(player)) {
@@ -178,7 +178,7 @@ public class PlayState extends GameState {
 					splitAsteroid(a);
 				}
 			}
-		}
+		}*/
 		
 	}
 
@@ -202,11 +202,11 @@ public class PlayState extends GameState {
 			asteroids.get(i).draw(sr);
 		}
 		
-		for (int i = 0; i < bullets.size() ; i++) {
-			bullets.get(i).draw(sr);
-		}
+//		for (int i = 0; i < bullets.size() ; i++) {
+//			bullets.get(i).draw(sr);
+//		}
 		
-		player.draw(sr);
+//		player.draw(sr);
 		
 		for (int i = 0; i < particles.size() ; i++) {
 			particles.get(i).draw(sr);
