@@ -1,4 +1,4 @@
-package com.me.gamestates;
+package com.revoltagames.gamestates;
 
 import java.util.ArrayList;
 
@@ -10,9 +10,9 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
-import com.me.entities.Particle;
-import com.me.managers.GameStateManager;
-import com.me.mygdxgame.MainGame;
+import com.revoltagames.entities.Particle;
+import com.revoltagames.managers.GameStateManager;
+import com.revoltagames.mygdxgame.MainGame;
 
 public class MenuState extends GameState {
 	

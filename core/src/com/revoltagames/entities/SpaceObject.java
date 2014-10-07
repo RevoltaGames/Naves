@@ -1,6 +1,6 @@
-package com.me.entities;
+package com.revoltagames.entities;
 
-import com.me.mygdxgame.MainGame;
+import com.revoltagames.mygdxgame.MainGame;
 
 public class SpaceObject {
 	

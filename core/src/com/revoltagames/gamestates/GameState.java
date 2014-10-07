@@ -1,6 +1,6 @@
-package com.me.gamestates;
+package com.revoltagames.gamestates;
 
-import com.me.managers.GameStateManager;
+import com.revoltagames.managers.GameStateManager;
 
 public abstract class GameState {
 	

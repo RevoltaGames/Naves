@@ -1,4 +1,4 @@
-package com.me.gamestates;
+package com.revoltagames.gamestates;
 
 import java.util.ArrayList;
 
@@ -8,13 +8,13 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
-import com.me.entities.Asteroid;
-import com.me.entities.Bullet;
-import com.me.entities.Particle;
-import com.me.entities.Player;
-import com.me.managers.GameKeys;
-import com.me.managers.GameStateManager;
-import com.me.mygdxgame.MainGame;
+import com.revoltagames.entities.Asteroid;
+import com.revoltagames.entities.Bullet;
+import com.revoltagames.entities.Particle;
+import com.revoltagames.entities.Player;
+import com.revoltagames.managers.GameKeys;
+import com.revoltagames.managers.GameStateManager;
+import com.revoltagames.mygdxgame.MainGame;
 
 public class PlayState extends GameState {
 	

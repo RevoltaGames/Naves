@@ -1,15 +1,15 @@
-package com.me.gamestates;
+package com.revoltagames.gamestates;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
-import com.me.entities.Player;
-import com.me.managers.GameInputProcessor;
-import com.me.managers.GameKeys;
-import com.me.managers.GameStateManager;
-import com.me.mygdxgame.MainGame;
+import com.revoltagames.entities.Player;
+import com.revoltagames.managers.GameInputProcessor;
+import com.revoltagames.managers.GameKeys;
+import com.revoltagames.managers.GameStateManager;
+import com.revoltagames.mygdxgame.MainGame;
 
 public class GameOverState extends GameState {
 	

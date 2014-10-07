@@ -1,10 +1,10 @@
-package com.me.managers;
+package com.revoltagames.managers;
 
-import com.me.entities.Player;
-import com.me.gamestates.GameOverState;
-import com.me.gamestates.GameState;
-import com.me.gamestates.MenuState;
-import com.me.gamestates.PlayState;
+import com.revoltagames.entities.Player;
+import com.revoltagames.gamestates.GameOverState;
+import com.revoltagames.gamestates.GameState;
+import com.revoltagames.gamestates.MenuState;
+import com.revoltagames.gamestates.PlayState;
 
 public class GameStateManager {
 

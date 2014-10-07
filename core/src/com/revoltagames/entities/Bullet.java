@@ -1,4 +1,4 @@
-package com.me.entities;
+package com.revoltagames.entities;
 
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
