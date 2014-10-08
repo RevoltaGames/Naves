@@ -4,9 +4,12 @@ import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.math.MathUtils;
+import com.revoltagames.gamestates.GameState;
+import com.revoltagames.gamestates.PlayState;
 import com.revoltagames.naves.Naves;
 
 public class Player extends SpaceObject{
@@ -41,7 +44,7 @@ public class Player extends SpaceObject{
 	private int extraLives;
 	private long requiredScore;
 	
-	public Player(ArrayList<Bullet> bullets) {
+	public Player() {
 		
 		x = Naves.WIDTH / 2;
 		y = Naves.HEIGTH / 2;
@@ -62,7 +65,8 @@ public class Player extends SpaceObject{
 		
 		maxFlameTime = 0.1f;
 		
-		this.bullets = bullets;
+		
+		bullets = new ArrayList<Bullet>();
 		
 		hit = false;
 		dead = false;
@@ -130,14 +134,14 @@ public class Player extends SpaceObject{
 				dead = true;
 				hitTimer = 0;
 			}
-			for(int i = 0; i < hitLines.length; i++){
-				hitLines[i].setLine(
-					hitLines[i].x1 + hitLinesVector[i].x * 10 * dt,
-					hitLines[i].y1 + hitLinesVector[i].y * 10 * dt,
-					hitLines[i].x2 + hitLinesVector[i].x * 10 * dt,
-					hitLines[i].y2 + hitLinesVector[i].y * 10 * dt
-						);
-			}
+//			for(int i = 0; i < hitLines.length; i++){
+//				hitLines[i].setLine(
+//					hitLines[i].x1 + hitLinesVector[i].x * 10 * dt,
+//					hitLines[i].y1 + hitLinesVector[i].y * 10 * dt,
+//					hitLines[i].x2 + hitLinesVector[i].x * 10 * dt,
+//					hitLines[i].y2 + hitLinesVector[i].y * 10 * dt
+//						);
+//			}
 			return;
 		}
 		
@@ -200,9 +204,9 @@ public class Player extends SpaceObject{
 		sr.begin(ShapeType.Line);
 		
 		if (hit) {
-			for(int i = 0; i < hitLines.length; i++) {
-				sr.line(hitLines[i].x1, hitLines[i].y1, hitLines[i].x2, hitLines[i].y2);
-			}
+//			for(int i = 0; i < hitLines.length; i++) {
+//				sr.line(hitLines[i].x1, hitLines[i].y1, hitLines[i].x2, hitLines[i].y2);
+//			}
 			sr.end();
 			return;
 		}
@@ -250,6 +254,10 @@ public class Player extends SpaceObject{
 		setShape();
 		hit = dead = false;
 		
+	}
+	
+	public ArrayList<Bullet> getBullets(){
+		return bullets;
 	}
 	
 
