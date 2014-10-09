@@ -38,4 +38,6 @@ public class Naves extends ApplicationAdapter {
 		gameStManager.update(Gdx.graphics.getDeltaTime());
 		gameStManager.draw();
 	}
+	
+	
 }
