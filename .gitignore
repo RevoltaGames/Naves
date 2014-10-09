@@ -5,7 +5,9 @@
 *.dll
 *.exe
 *.o
-*.so
+*.soq
+
+*.cache
  
 # Packages #
 ############
