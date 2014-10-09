@@ -44,6 +44,6 @@ android/.classpath
 android/.settings/org.eclipse.jdt.core.prefs
 core/.settings/org.eclipse.jdt.core.prefs
 desktop/.settings/org.eclipse.jdt.core.prefs
-bin/*
+bin/
 
 
